@@ -6,7 +6,7 @@ const Todos = (props) => {
   return (
     <div>
       {props.todos.map((todo) => (
-        <Todo key={todo.id} todo={todo} />
+        <Todo key={todo.id} todo={todo} onDelete={props.onDelete}/>
       ))}
     </div>
   );
