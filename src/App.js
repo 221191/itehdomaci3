@@ -1,10 +1,12 @@
 import './App.css';
 import Header from './components/Header';
-function App() {
+import Todo from './components/Todo';
+
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello From React</h1>
-      <Header title="test" />
+      <Header title="To-Do List" />
+      <Todo/>
     </div>
   );
 }
