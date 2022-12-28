@@ -1,7 +1,4 @@
 import './App.css';
-import Header from './components/Header';
-import Todos from './components/Todos';
-import AddTodo from './components/AddTodo';
 import TodosPage from './components/pages/TodosPage'
 import AddTodoPage from './components/pages/AddTodoPage'
 import Navbar from './components/Navbar';
