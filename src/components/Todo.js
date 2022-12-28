@@ -5,8 +5,11 @@ const Todo = (props) => {
   return (
     <div className='all-todo'>
       <div className='todos'>
-        <h3 className='todo-text'>{props.todo.text} <FaTimes className='delete-todo' onClick={() => props.onDelete(props.todo.id)} /> </h3>
-        <p className='todo-day'>{props.todo.day}</p>
+        <div className='wrap'>
+        <input className='chk-complete' type="checkbox" id="completed" checked={props.todo.completed} onChange={() => props.toggleComplete(props.todo.id)}/>
+        <h3 className={`todo-text ${props.todo.completed ? 'strike' : ''}`}>{props.todo.text} </h3>
+        </div>
+        <FaTimes className='delete-todo' size={40} onClick={() => props.onDelete(props.todo.id)} /> 
         </div>
     </div>
   )

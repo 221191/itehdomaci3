@@ -24,11 +24,6 @@ const AddTodo = (props) => {
             <label>Todo</label>
             <input type="text" placeholder='Add Todo' value={text} onChange={(e)=> setText(e.target.value)}/>
         </div>
-        <div className='form'>
-            <label>Day & Time</label>
-            <input type="text" placeholder='Add Day & Time' value={day} onChange={(e)=> setDay(e.target.value)}/>
-        </div>
-
         <input className="add-btn" type="submit" value="Save Todo" />
        
     </form>

@@ -6,7 +6,6 @@
 }
 
 .todos{
-    position: relative;
     margin: 2rem 0;
     background-color: #cccccc;
     padding-left: 20px;
@@ -15,8 +14,9 @@
     border-radius: 12px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    gap: 5rem;
     width: 50%;
 }
 
@@ -33,8 +33,23 @@
     margin-top: 10px;
 }
 .delete-todo{
-    position: absolute;
     color:red;
     cursor: pointer;
-    right: 0;
+    padding-right: 0.5rem;
+}
+
+.chk-complete{
+    width: 32px;
+    height: 32px;
+}
+
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.strike{
+    text-decoration: line-through;
 }

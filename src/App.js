@@ -11,25 +11,32 @@ const App = () => {
     {
       id: 1,
       text: "Gym",
-      day: "Dec 27th at 2:30pm",
+      completed: true
     },
     {
       id: 2,
       text: "Meeting for work",
-      day: "Dec 28th at 1:30pm",
+      completed: false
     },
     {
       id: 3,
       text: "Shopping",
-      day: "Dec 27th at 2:30pm",
+      completed: false
     },
   ]);
+
+
+  const toggleComplete = (id) =>{
+    setTodos(prev =>
+      prev.map((todo) => todo.id === id ? {...todo, completed: !todo.completed} : todo)
+    )
+  }
 
   // Dodavanje todo
   const addTodo = (todo) =>{
     const id = Math.floor(Math.random() * 10000) + 1;
 
-    const newTodo = {id, ...todo};
+    const newTodo = {id, completed: false, ...todo};
     setTodos([...todos, newTodo]);
   }
 
@@ -46,7 +53,7 @@ const App = () => {
       <Routes>
         <Route path="/">
         <Route index element={<Navigate to="/todos" replace />} />
-          <Route path="/todos" element={<TodosPage todos={todos} onDelete={deleteTodo}/>} />
+          <Route path="/todos" element={<TodosPage todos={todos} onDelete={deleteTodo} toggleComplete={toggleComplete}/>} />
           <Route path="/addtodo" element={<AddTodoPage onAdd={addTodo} />} />
         </Route>
       </Routes>
