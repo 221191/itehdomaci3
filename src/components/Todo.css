@@ -1,0 +1,40 @@
+.all-todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos{
+    position: relative;
+    margin: 2rem 0;
+    background-color: #cccccc;
+    padding-left: 20px;
+    height: 120px;
+    border: 1px solid #c1c0c0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+}
+
+.todo-text,
+.todo-day{
+    font-size: 2rem;
+}
+
+.todo-text{
+    letter-spacing: 1px;
+}
+
+.todo-day{
+    margin-top: 10px;
+}
+.delete-todo{
+    position: absolute;
+    color:red;
+    cursor: pointer;
+    right: 0;
+}

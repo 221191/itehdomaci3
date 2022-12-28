@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './AddTodo.css';
 
 const AddTodo = (props) => {
     const [text, setText] = useState('');
@@ -18,17 +19,17 @@ const AddTodo = (props) => {
         setDay('');
     }
     return (
-    <form onSubmit={onSubmit}>
-        <div className='forma-neka'>
+    <form className='my-form' onSubmit={onSubmit}>
+        <div className='form'>
             <label>Todo</label>
             <input type="text" placeholder='Add Todo' value={text} onChange={(e)=> setText(e.target.value)}/>
         </div>
-        <div className='forma-neka'>
+        <div className='form'>
             <label>Day & Time</label>
             <input type="text" placeholder='Add Day & Time' value={day} onChange={(e)=> setDay(e.target.value)}/>
         </div>
 
-        <input type="submit" value="Save Todo" />
+        <input className="add-btn" type="submit" value="Save Todo" />
        
     </form>
   )

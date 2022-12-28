@@ -7,6 +7,7 @@ import AddTodoPage from './components/pages/AddTodoPage'
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -47,6 +48,7 @@ const App = () => {
         <Navbar/>
       <Routes>
         <Route path="/">
+        <Route index element={<Navigate to="/todos" replace />} />
           <Route path="/todos" element={<TodosPage todos={todos} onDelete={deleteTodo}/>} />
           <Route path="/addtodo" element={<AddTodoPage onAdd={addTodo} />} />
         </Route>

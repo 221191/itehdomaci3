@@ -1,11 +1,13 @@
 import React from 'react';
 import {FaTimes} from 'react-icons/fa';
-
+import './Todo.css';
 const Todo = (props) => {
   return (
-    <div>
-        <h3>{props.todo.text} <FaTimes style={{color: 'red', cursor: 'pointer'}} onClick={() => props.onDelete(props.todo.id)} /> </h3>
-        <p>{props.todo.day}</p>
+    <div className='all-todo'>
+      <div className='todos'>
+        <h3 className='todo-text'>{props.todo.text} <FaTimes className='delete-todo' onClick={() => props.onDelete(props.todo.id)} /> </h3>
+        <p className='todo-day'>{props.todo.day}</p>
+        </div>
     </div>
   )
 }

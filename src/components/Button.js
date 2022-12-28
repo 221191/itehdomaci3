@@ -1,9 +1,8 @@
 import React from "react";
 import "./Button.css";
 const Button = (props) => {
-  const onClick = () => {};
   return (
-    <button onClick={props.onClick} style={{ backgroundColor: props.color }}>
+    <button className="btn" onClick={props.onClick}>
       {props.text}
     </button>
   );
